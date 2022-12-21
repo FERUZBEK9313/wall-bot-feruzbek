@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup as BS
 import mysql.connector
 
 mydb = mysql.connector.connect(
-    host = "localhost",
+    host = "http://localhost/phpmyadmin/index.php?route=/database/structure&db=wallpapers_bot",
     user = "root",
     password = "",
     database = "wallpapers_bot"
