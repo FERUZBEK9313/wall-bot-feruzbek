@@ -9,7 +9,8 @@ mydb = mysql.connector.connect(
     host = "http://localhost/phpmyadmin/index.php?route=/database/structure&db=wallpapers_bot",
     user = "root",
     password = "",
-    database = "wallpapers_bot"
+    database = "wallpapers_bot",
+    port = "3306"
 )
 mycursor = mydb.cursor()
 
