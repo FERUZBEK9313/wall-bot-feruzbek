@@ -168,7 +168,7 @@ async def add_theme(message: types.Message):
             i+=1
 
     if message.text == "Asosiy menyu⬆️" or message.text == "Главное меню⬆️" or message.text == "Main menu⬆️":
-        if admin:
+        if message.from_user.username == "Feruzbek_Sapayev":
             await message.answer(message.text, reply_markup=theme_admin)
         else:
             await message.answer(message.text, reply_markup=theme)
