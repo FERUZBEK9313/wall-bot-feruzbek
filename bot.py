@@ -176,7 +176,7 @@ async def add_theme(message: types.Message):
                 await bot.send_photo(chat_id=message.chat.id, photo=images[i], caption=caption, reply_markup=control, parse_mode="html")
                 i+=1
 
-    if (message.text == "Yana ➡️") or (message.text == "Ещё ➡️") or (message.text == "Next ➡️"):
+    if (message.text == "Yana ➡️"):
         
         i = page
         page += 5
@@ -184,11 +184,11 @@ async def add_theme(message: types.Message):
             await bot.send_photo(chat_id=message.chat.id, photo=images[i], caption=caption, reply_markup=control, parse_mode="html")
             i+=1
 
-    if message.text == "Asosiy menyu⬆️" or message.text == "Главное меню⬆️" or message.text == "Main menu⬆️":
+    if message.text == "Asosiy menyu⬆️":
         if message.from_user.username == "Feruzbek_Sapayev":
             await message.answer(message.text, reply_markup=theme_admin)
         else:
-            add_them(user_id)
+            add_them()
             await message.answer(message.text, reply_markup=theme)
 
     if message.text == '📊 Statistika':
